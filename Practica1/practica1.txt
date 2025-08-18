@@ -1,0 +1,28 @@
+1. La diferencia más notoria al usar Haskell y Java, es el tipo de estructura que manejan
+por n lado Haskell tiene una forma de código más conciso que Java, y Java tiene un estilo
+llamado C que es conocido por usar bloques de código, delimitarse por medio de llaves y
+terminar en punto y coma. Además difieren en que la concurencia de cada uno está dirigida
+a diferentes enfoques, siendo en Java los multihilos y la capacidad de procesar código en
+paralelo, es decir, que puede dividir su carga de trabajo utilizando múltiples procesadores,
+mientras Haskell utiliza hilos ligeros. Y algo muy importante es que Java va orientado
+principalmente a objetos que pueden contener datos y código para el desarrollo de aplicaciones
+empresariales y móviles. Haskell utilza un lenguaje de programacón funcional que es más para
+uso matemático.
+
+2. El hecho de que Haskell no haya tenido un puesto tan reconocido en la industria del software
+es por la baja familiaridaad de los programadores con su sintaxis, además de que el ecosistema
+Java, así también como de otros, es más amplio que el de Haskell  dando como consecuencia que
+hayan pocos programadores la utilicen y prefieran cosas modernas y más cómodas de utlizar.
+
+3. Una analogía que pienso es que como se nos ha dicho, git es como un videojuego donde cada
+vez que queremos guardar nuestro progreso se crea un checkpoint al que podemos volver si algo
+hicimos mal, y github es cuando compartimos con otras personas la cuenta de nuestro juego que
+lleva nuestro progreso para que puedan seguir jugando. No es tan buena analogía.
+
+
+
+FUENTES
+
+- Chapter 15 - Parallel Machine Learning and Deep Learning Approaches for Bioinformatics. (2019). En Deep Learning and Parallel Computing Environment for Bioengineering Systems (pp. 245-255). Arun Kumar Sangaiahb. https://doi.org/10.1016/B978-0-12-816718-2.00022-1.Chapter 15 - Parallel Machine Learning and Deep Learning Approaches for Bioinformatics. (2019). En Deep Learning and Parallel Computing Environment for Bioengineering Systems (pp. 245-255). Arun Kumar Sangaiahb. https://doi.org/10.1016/B978-0-12-816718-2.00022-1.
+- S, S. (2023, 28 abril). Java vs. Haskell: Understanding the Key Differences. Medium. https://blog.devgenius.io/java-vs-haskell-understanding-the-key-differences-5b6b777c577e
+- Why did Google go with Java instead of Haskell? Why are they pushing for Go instead of using Haskell or Idris now? (s. f.). Quora. https://www.quora.com/Why-did-Google-go-with-Java-instead-of-Haskell-Why-are-they-pushing-for-Go-instead-of-using-Haskell-or-Idris-now#:~:text=%C2%B7%2011%20a%C3%B1os-,Respuesta%20original:%20%C2%BFPor%20qu%C3%A9%20Google%20eligi%C3%B3%20Java%20en%20lugar%20de,Vea%20esta%20presentaci%C3%B3n%20como%20ejemplo.&text=%C2%B7%2011%20a%C3%B1os-,Respuesta%20original:%20%C2%BFPor%20qu%C3%A9%20Google%20eligi%C3%B3%20Java%20en%20lugar%20de,aparece%20en%20el. . .?
