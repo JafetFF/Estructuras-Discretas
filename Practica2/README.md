@@ -8,4 +8,4 @@ En esta práctica realizaremos funciones para distintas cosas, a fin de
 aprender algunos comandos útiles de Haskell, en el que usaremos el 
 comando ghci para evaluar y hacer diferentes operaciones.
 
-![La terminal](<Captura de pantalla (319).png>)
+![La terminal](<https://github.com/JafetFF/Estructuras-Discretas/issues/1#issue-3365282768>)
