@@ -11,4 +11,9 @@ los números enteros.
 
 ![Ejemplo](<https://github.com/JafetFF/Estructuras-Discretas/issues/2>)
 
+** Tiempo requerido **
+Aproximadamente 8 horas tratando de hacer que quedaran los codigos jaja ;)
+
+
+
 
