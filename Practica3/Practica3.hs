@@ -3,13 +3,22 @@ Función 1: toma un Int y nos regresa el numero de creditos que
 tiene una materia de la carrera Ciencias de la Computación
 -}
 
+
 {-creditos :: Int -> [String]
 creditos a =
-  a == 12 = ["Introducción a las CC"]
-  a == 10 = ["Estructuras Discretas, Álgebra Superior 1"]
-  a == 4 = ["Inglés"]
+  if a == 12
+  then ["Introduccion a las CC"]
+  else if a == 10
+  then ["Estructuras Discretas, Álgebra Superior I"]
+  else if a == 4
+  then ["Inglés"]
+  else []-}
 
--}
+creditos :: Int -> IO()
+creditos 4 = putStrLn "[Ingles I]"
+creditos 10 = putStrLn "[Algebra Superior I, Estructuras Discretas]"
+creditos 12 = putStrLn "[Introduccion a las CC]"
+
 
 {-
 Función 2: cuenta la cantidad de números negativos de una
@@ -25,18 +34,17 @@ negativos tupla = length [ x | x <- tupla, x < 0]
 Función 3: nos devuelve los numeros primos de una lista
 -}
 
-{-primos :: [Int] -> [Int]
-primos n = [x | x <- [2..n], primo x]
 
-primo :: Int -> Bool
-primo n = factores n == [1, n]
+primos :: [Int] -> [Int]
+primos lista = [ x | x <- lista, primo x == [1, x]]
+       where
+       primo x = [ n | n <- [1..x], x `mod` n == 0]
 
-factores :: [Int] -> [Int]
-factores n = [x | x <- [1..n], n `mod` x == 0]-}
 
 {-
 Funcion 4: devuelve otra lista pero sin elementos repetidos
 -}
 
-conjuntoLista :: [Int] -> [Int]
-conjuntoLista lista = [x | x <- lista] 
+conjuntoLista :: Eq a => [a] -> [a]
+conjuntoLista [] = []
+conjuntoLista (x:xs) = x : conjuntoLista [ y | y <- xs, y /= x]
