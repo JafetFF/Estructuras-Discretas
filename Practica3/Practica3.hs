@@ -12,7 +12,9 @@ creditos a =
   then ["Estructuras Discretas, Álgebra Superior I"]
   else if a == 4
   then ["Inglés"]
-  else []-}
+  else []
+
+este no salió pero lo dejo para ver que intenté hacer-}
 
 creditos :: Int -> IO()
 creditos 4 = putStrLn "[Ingles I]"
@@ -32,6 +34,7 @@ negativos tupla = length [ x | x <- tupla, x < 0]
 
 {-
 Función 3: nos devuelve los numeros primos de una lista
+utilizamos una función auxiliar
 -}
 
 
