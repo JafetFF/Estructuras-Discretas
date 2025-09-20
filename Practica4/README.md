@@ -22,7 +22,7 @@ recursión).
 
 
 
-** OBJETIVO DE LA PRÁCTICA 4
+** OBJETIVO DE LA PRÁCTICA 4 **
 
 Utilizando recursión, implementar funciones donde utilicemos
 tipos de datos (Natural y Matrioska) que definiremos al inicio
