@@ -1,0 +1,23 @@
+module Aux (multNat, sumNat) where
+data Natural = Cero | S Natural deriving (Eq, Show)
+{-
+Función auxiliar que multiplica Naturales
+-}
+
+
+multNat :: Natural -> Natural -> Natural
+multNat Cero Cero = Cero
+multNat Cero (S m) = Cero
+multNat (S m) Cero = Cero
+multNat (S Cero) m = m
+multNat (S m) (S n) = sumNat (S m) (multNat (S m) n)
+
+{-
+Función auxiliar que suma Naturales 
+-}
+
+sumNat :: Natural -> Natural -> Natural
+sumNat Cero Cero = Cero
+sumNat Cero (S n) = (S n)
+sumNat (S m) Cero = (S m)
+sumNat (S m) (S n) = sumNat m (S (S (n)))
