@@ -28,7 +28,7 @@ Utilizando recursión, implementar funciones donde utilicemos
 tipos de datos (Natural y Matrioska) que definiremos al inicio
 de la actividad
 
-*Naturales
+*Naturales*
 
 1. a_natural
 
@@ -69,7 +69,7 @@ usarlo para multiplicar el (S m) por lo que saliera de la recursión de
 ese mismo Natural pero sin un Sucesor, es decir, de (S m) ----> (m) y
 así hasta llegar a un caso base.
 
-*Mati
+*Mati*
 
 5. mayorIgual
 
