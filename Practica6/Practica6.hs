@@ -1,0 +1,71 @@
+module Practica6 (module Aux, TipoRecorrido(..), nVacios, refleja, minimo,
+recorrido, esBalanceado, listaArbol) where
+import Aux
+data TipoRecorrido = InOrden | PreOrden | PosOrden deriving (Eq, Show)
+
+--FUNCIONES
+
+{-
+Función que devuelve la cantidad de nodos vacios de un árbol
+-}
+
+nVacios :: Arbol a -> Int
+nVacios Vacio = 1
+nVacios (AB r ai ad) = nVacios ai + nVacios ad
+
+{-
+Función que devuelve el árbol al revés, de manera que los
+subárboles izquierdos se vuelven los subárboles derechos
+-}
+
+refleja :: Arbol a -> Arbol a
+refleja Vacio = Vacio
+refleja (AB r ai ad) = AB r (refleja ad) (refleja ai)
+
+{-
+Función que devuelve el minimo de un arbol
+-}
+
+minimo :: Ord a => Arbol a -> a
+minimo Vacio = error ""
+minimo (AB r Vacio Vacio) = r
+minimo (AB r ai Vacio) = min r (minimo ai)
+minimo (AB r Vacio ad) = min r (minimo ad)
+minimo (AB r ai ad) = min r (min (minimo ai) (minimo ad))
+
+{-
+Función que devuelve la lista de un arbol en uno de los
+siguientes recorridos:
+ * preOrden
+ * inOrden
+ * postOrden
+-}
+
+-- Función que regresa el recorrido en PostOrden
+
+recorrido :: Arbol a -> TipoRecorrido -> [a]
+recorrido Vacio _ = []
+recorrido (AB r ai ad) tipo
+  | tipo == InOrden = recorrido ai tipo ++ [r] ++ recorrido ad tipo
+  | tipo == PreOrden = [r] ++ recorrido ai tipo ++ recorrido ad tipo
+  | tipo == PosOrden = recorrido ai tipo ++ recorrido ad tipo ++ [r]
+  | otherwise = []
+{-
+Función que verifica si un árbol es balanceado
+-}
+
+esBalanceado :: Arbol Int -> Bool
+esBalanceado Vacio = True
+esBalanceado (AB r ai ad) = if ((altura ai - altura ad) <= 1 && abs(altura ad - altura ai) <=1) then True else False
+  where
+  altura Vacio = 0
+  altura (AB r ai ad) = 1 + max (altura ai) (altura ad)
+
+{-
+Función que recibe una lista y devuelve un árbol binario de búsqueda
+-}
+
+listaArbol :: Ord a => [a] -> Arbol a
+listaArbol [] = Vacio
+listaArbol (x:xs) = recorre (xs) (AB x Vacio Vacio)
+  
