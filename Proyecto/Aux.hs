@@ -15,3 +15,17 @@ eliminaRepetidos _ [] = []
 eliminaRepetidos z (x:xs)
   | z == x = eliminaRepetidos z [y | y <- xs, y /= z]
   | otherwise = x : eliminaRepetidos z [y | y <- xs, y /= z]
+
+{-
+Funciones auxilares de la segunda
+-}
+
+-- Funcion quickSort
+
+quickSort :: (Ord b) => [(a, b)] -> [(a, b)]
+quickSort [] = []
+quickSort ((a, b):xs) =
+  let may = quickSort [x | x <- xs, snd x >= b]
+      men = quickSort [x | x <- xs, snd x < b]
+  in may ++ [(a, b)] ++ men
+
