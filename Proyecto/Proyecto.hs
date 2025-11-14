@@ -25,8 +25,9 @@ ordfrec :: [(Char, Int)] -> [(Char, Int)]
 ordfrec [] = []
 ordfrec ((c, n):xs) = quickSort ((c, n):xs)
 
-lista_
-
+arbol :: [(Char, Int)] -> AB
+arbol [] = Vacio
+arbol ((c, i):xs) = Nodo (arbol xs) (Hoja c)
 
 stree :: String -> (Char, Int) 
 stree "" = error "f"
