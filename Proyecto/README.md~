@@ -1,0 +1,24 @@
+# Codificación de Huffman
+
+---
+
+## Objetivo
+
+Entender la como funciona la codificación y decodificación usando el
+Árbol de Huffman. Además, llevar a cabo actividades que nos permitan
+adentrarnos a conocer otras formas de codificar texto, imágenes, audio
+y video. Y como resultado dar funciones para codificar y decodificar
+una cadena de texto, para dar el Árbol de Huffman apartir de un texto.
+
+## Codificador de Árbol de Huffman
+**(tercera función en Proyecto.hs)**
+
+1. A partir de una cadena, se construye un **árbol binario** y ese árbol se pasa como parámetro a otra función.
+2. Esa otra función se llama **codTree**, ahí se recorren los caminos del árbol asignándoles a cada caracter 0 ó 1 dependiendo qué lado recorra (izquierda = 0, derecha = 1).
+3. Finalmente, se le pasa a la función **codifica** la palabra a codificar y la lista de tuplas con el valor de cada letra según su frecuencia, y con la auxiliar **cochar** va dando la cadena que le corresponde a cada letra de la palabra a codificar.
+
+## Función de Descifrado
+
+1. Recibe una cadena de bits y el árbol de Huffman.
+2. Atraviesa el árbol según cada bit hasta llegar a un nodo hoja.
+3. Genera el símbolo original. Repite hasta procesar todos los bits.
