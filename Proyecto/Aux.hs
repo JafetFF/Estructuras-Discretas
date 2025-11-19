@@ -78,7 +78,7 @@ codf [] = []
 codf holaMundo = (codTree (stree2 holaMundo) "")
 
 -- Funcion que codifica letra por letra de la cadena de texto
-z
+
 cochar :: Char -> [(Char, String)] -> String
 cochar _ [] = ""
 cochar p ((c, s):xs)
